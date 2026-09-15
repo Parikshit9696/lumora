@@ -188,3 +188,5 @@ This is a **frontend-only demo project**. There is no real backend, no real auth
 ## Credits
 
 **Created by Parikshit Jadhav**
+#   l u m o r a  
+ 
