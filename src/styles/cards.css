@@ -1,0 +1,279 @@
+/* ---------- Wishlist button (shared) ---------- */
+
+.wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(251, 249, 245, 0.9);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.wishlist-btn:hover { transform: scale(1.08); }
+.wishlist-btn.active { color: var(--danger); }
+
+/* ---------- Photoshoot card ---------- */
+
+.photoshoot-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.photoshoot-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.photoshoot-card:hover .photoshoot-card-media img {
+  transform: scale(1.05);
+}
+
+.photoshoot-card-badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  background: rgba(251, 249, 245, 0.92);
+}
+
+.photoshoot-card-body {
+  padding: 22px;
+}
+
+.photoshoot-card-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.photoshoot-card-photographer {
+  color: var(--stone);
+  font-size: 13.5px;
+  margin-bottom: 10px;
+}
+
+.photoshoot-card-meta {
+  display: flex;
+  gap: 16px;
+  color: var(--stone);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.photoshoot-card-meta span { display: inline-flex; align-items: center; gap: 5px; }
+
+.photoshoot-card-photos {
+  font-size: 13px;
+  color: var(--stone);
+  margin-bottom: 10px;
+}
+
+.photoshoot-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.photoshoot-card-price {
+  font-family: var(--font-display);
+  font-size: 21px;
+}
+
+.photoshoot-card-actions { display: flex; gap: 8px; align-items: center; }
+.compare-toggle.active { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+
+/* ---------- Photographer card ---------- */
+
+.photographer-card { display: block; }
+
+.photographer-card-cover {
+  position: relative;
+  height: 130px;
+}
+
+.photographer-card-cover img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photographer-card-avatar {
+  position: absolute;
+  bottom: -32px;
+  left: 22px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 4px solid var(--paper);
+  object-fit: cover;
+}
+
+.photographer-card-body {
+  padding: 44px 22px 22px;
+}
+
+.photographer-card-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.photographer-card-name h4 {
+  font-size: 18px;
+}
+
+.photographer-card-spec {
+  font-size: 13.5px;
+  margin: 4px 0 8px;
+}
+
+.photographer-card-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--stone);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.photographer-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--stone);
+  margin: 12px 0 10px;
+}
+
+.photographer-card-price { color: var(--ink); font-weight: 600; }
+
+/* ---------- Product card ---------- */
+
+.product-card-media {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.product-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.product-card:hover .product-card-media img { transform: scale(1.05); }
+
+.product-card-body { padding: 18px; }
+
+.product-card-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16.5px;
+  margin: 8px 0 2px;
+}
+
+.product-card-sub { font-size: 12.5px; margin-bottom: 8px; }
+
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.product-card-price {
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+/* ---------- Gallery card ---------- */
+
+.gallery-card {
+  position: relative;
+  margin: 0 0 20px;
+  break-inside: avoid;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+
+.gallery-card:hover img { transform: scale(1.04); }
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21,19,15,0) 40%, rgba(21,19,15,0.75) 100%);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+}
+
+.gallery-card:hover .gallery-card-overlay { opacity: 1; }
+
+.gallery-card-title { color: var(--ivory); font-weight: 600; font-size: 15px; }
+.gallery-card-photographer { color: rgba(246,242,234,0.75); font-size: 12.5px; margin-bottom: 10px; }
+
+.gallery-card-actions { display: flex; gap: 8px; }
+.gallery-card-actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(246,242,234,0.4);
+  background: rgba(21,19,15,0.3);
+  color: var(--ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-card-actions button.active { color: var(--champagne); }
+
+/* ---------- Review card ---------- */
+
+.review-card { padding: 22px; }
+
+.review-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.review-card-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.review-card-name { font-weight: 600; font-size: 14.5px; }
+.review-card-date { font-size: 12px; }
+.review-card-verified { margin-left: auto; }
+.review-card-text { margin-top: 10px; color: var(--charcoal); font-size: 14.5px; line-height: 1.65; }
+
+/* ---------- Rating ---------- */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--stone);
+  margin: 4px 0;
+}
+
+.rating-stars { display: inline-flex; gap: 2px; color: var(--champagne-dark); }
+.rating-value { font-weight: 600; color: var(--ink); }

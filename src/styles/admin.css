@@ -1,0 +1,29 @@
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 200px;
+  padding-top: 20px;
+}
+
+.bar-chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-chart-bar {
+  width: 100%;
+  max-width: 36px;
+  background: linear-gradient(180deg, var(--champagne), var(--champagne-dark));
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s var(--ease);
+}
+
+.bar-chart-label { font-size: 11.5px; color: var(--stone); }
+
+.admin-thumb { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }

@@ -1,0 +1,114 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.dashboard-sidebar {
+  position: sticky;
+  top: 96px;
+}
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+
+.dashboard-user img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-user-name { font-weight: 600; font-size: 14.5px; }
+.dashboard-user-email { font-size: 12px; color: var(--stone); }
+
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashboard-nav button,
+.dashboard-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--charcoal);
+}
+
+.dashboard-nav button.active,
+.dashboard-nav a.active {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.dashboard-nav button:hover:not(.active),
+.dashboard-nav a:hover:not(.active) { background: var(--beige); }
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.dashboard-stat-card {
+  padding: 20px;
+  text-align: left;
+}
+
+.dashboard-stat-card .value { font-family: var(--font-display); font-size: 26px; }
+.dashboard-stat-card .label { color: var(--stone); font-size: 13px; margin-top: 4px; }
+
+@media (max-width: 900px) {
+  .dashboard-layout { grid-template-columns: 1fr; }
+  .dashboard-sidebar { position: static; }
+  .dashboard-nav { flex-direction: row; overflow-x: auto; }
+  .dashboard-stats { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Admin table ---------- */
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--stone);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.admin-row-actions { display: flex; gap: 6px; }
